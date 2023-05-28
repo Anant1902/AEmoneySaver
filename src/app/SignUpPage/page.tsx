@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css';
 import '../globals.css'
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { checkSignIn, createUser } from '../../../services/UserService'
+import { checkSignIn, createUser } from '../../components/UserService'
 import Link from 'next/link';
 
 
