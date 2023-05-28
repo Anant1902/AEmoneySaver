@@ -1,5 +1,5 @@
 import './globals.css'
-import Navbar from '../components/Navbar';
+import Navbar from '../src/components/Navbar';
 import 'tailwindcss/tailwind.css';
 
 export default function RootLayout({
