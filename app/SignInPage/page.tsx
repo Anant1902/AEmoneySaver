@@ -17,22 +17,20 @@ function SignInPage() {
     const [email, changeEmail] = useState('');
     const [lowerText, changeLowerText] = useState('');
 
-    const handleEmailChange = (event) => {
+    const handleEmailChange = (event: any) => {
         changeEmail(event.currentTarget.value);
     }
-    const handlePassChange = (event) => {
+    const handlePassChange = (event: any) => {
         changePass(event.currentTarget.value);
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: any) => {
 
         checkSignIn(email, pass).then(users => {
 
             if (users.length == 0) {
                 changeLowerText(
-                    <Link href='/SignUpPage'>
-                        Oops... Seems like you don't have an account yet. Sign up here<span aria-hidden="true">&rarr;</span>
-                    </Link>
+                    "Oops... Seems like you don't have an account yet. Sign up now!"
                     );
             }
             for (let user of users) {
@@ -40,11 +38,11 @@ function SignInPage() {
                 const name = user.name;
                 if (pass !== realPass) {
                     changeLowerText(
-                        <> Oops... You've entered the wrong password. Please try again! </>
+                        "Oops... You've entered the wrong password. Please try again!"
                         );
                 } else {
                     changeLowerText(
-                        <> Sign in successful. Welcome back {name}! </>
+                        "Sign in successful. Welcome back {name}!"
                         );
                 }
             }
@@ -89,7 +87,7 @@ function SignInPage() {
                 </button>
                 <Link href='/SignUpPage'>
                     <h1 className='mt-2 text-blue-800 text-1xl font-semibold text-left py-6 underline'>
-                    Don't have an account yet? Sign up now!
+                    Don&apos;t have an account yet? Sign up now!
                     </h1>
                 </Link>
                 <h1 className="font-semibold text-blue-800 text-3xl">

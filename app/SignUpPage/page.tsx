@@ -17,35 +17,31 @@ function SignUpPage() {
     const [email, changeEmail] = useState('');
     const [lowerText, changeLowerText] = useState('');
 
-    const handleUserChange = (event) => {
+    const handleUserChange = (event: any) => {
         changeUname(event.currentTarget.value);
     }
-    const handleNameChange = (event) => {
+    const handleNameChange = (event: any) => {
         changeName(event.currentTarget.value);
     }
-    const handleEmailChange = (event) => {
+    const handleEmailChange = (event: any) => {
         changeEmail(event.currentTarget.value);
     }
-    const handlePassChange = (event) => {
+    const handlePassChange = (event: any) => {
         changePass(event.currentTarget.value);
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: any) => {
 
         checkSignIn(email, pass).then(users => {
 
             if (users.length != 0) {
                 changeLowerText(
-                    <Link href='/SignInPage'>
-                        Oops... Seems like you already have an account. Sign in here!<span aria-hidden="true">&rarr;</span>
-                    </Link>
+                    "Oops... Seems like you already have an account. Sign in here!"
                     );
             } else {
                 createUser(id, email, uname, pass, name);
                 changeLowerText(
-                    <Link href='/SignInPage'>
-                        Sign Up successful! Welcome to Boundless Bazaar {name}.<span aria-hidden="true">&rarr;</span>
-                    </Link>
+                    "Sign Up successful! Welcome to Boundless Bazaar."
                     );
             }
         })
@@ -104,9 +100,9 @@ function SignUpPage() {
                     Already have an account? Sign in here!
                     </h1>
                 </Link>
-                <h1 className="font-semibold text-blue-800 text-3xl">
+                <Link href={'/SignInPage'} className="font-semibold text-blue-800 text-3xl">
                     {lowerText} 
-                </h1>
+                </Link>
             </div>
         </div>
     )
