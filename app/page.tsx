@@ -1,5 +1,4 @@
 import LandingPage from '../components/Landingpage'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
 import 'tailwindcss/tailwind.css';
 

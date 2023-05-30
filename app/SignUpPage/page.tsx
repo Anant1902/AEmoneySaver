@@ -1,8 +1,7 @@
 'use client';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import 'tailwindcss/tailwind.css';
-import '../globals.css'
-import { useRouter } from 'next/router';
+import '../globals.css';
 import { useState } from 'react';
 import { checkSignIn, createUser } from '../../components/UserService'
 import Link from 'next/link';
@@ -66,26 +65,25 @@ function SignUpPage() {
                 Sign up today and join the community.
             </h1>   
             <div className='text-left pl-52'>
-                <form>
+                <form className='pb-3'>
                     <label className='mt-2 text-blue-800 text-2xl leading-8 font-semibold sm:text-1xl pb-2 pr-14'>
                         Name:
                     </label>
                     <input type="text" onChange={handleNameChange} value={name} className='rounded text-1xl py-1 px-1'  />
                 </form> 
-               
-                <form>
+                <form className='pb-3'>
                     <label className='mt-2 text-blue-800 text-2xl leading-8 font-semibold sm:text-1xl pb-2 pr-16'>
                         Email:
                     </label>
                     <input type="email" onChange={handleEmailChange} value={email} className='rounded text-1xl py-1 px-1'  />
                 </form>
-                <form>
+                <form className='pb-3'>
                     <label className='mt-2 text-blue-800 text-2xl leading-8 font-semibold sm:text-1xl pb-2 pr-3'>
                         Username:
                     </label>
                     <input type="text" onChange={handleUserChange} value={uname} className='rounded text-1xl py-1 px-1'  />
                 </form>
-                <form>
+                <form className='pb-6'>
                     <label className='mt-2 text-blue-800 text-2xl leading-8 font-semibold sm:text-1xl pb-5 pr-4'>
                         Password:
                     </label>

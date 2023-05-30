@@ -1,11 +1,11 @@
 'use client';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import 'tailwindcss/tailwind.css';
 import '../globals.css'
-import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { checkSignIn, createUser } from '../../components/UserService'
+import { checkSignIn } from '../../components/UserService'
 import Link from 'next/link';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function SignInPage() {
@@ -69,13 +69,13 @@ function SignInPage() {
                 Sign In here.
             </h1>   
             <div className='text-left pl-52'>
-                <form>
+                <form className='pb-3'>
                     <label className='mt-2 text-blue-800 text-2xl leading-8 font-semibold sm:text-1xl pb-2 pr-16'>
                         Email:
                     </label>
                     <input type="email" onChange={handleEmailChange} value={email} className='rounded text-1xl py-1 px-1'  />
                 </form>
-                <form>
+                <form className='pb-6'>
                     <label className='mt-2 text-blue-800 text-2xl leading-8 font-semibold sm:text-1xl pb-5 pr-4'>
                         Password:
                     </label>
@@ -86,9 +86,9 @@ function SignInPage() {
                     Submit
                 </button>
                 <Link href='/SignUpPage'>
-                    <h1 className='mt-2 text-blue-800 text-1xl font-semibold text-left py-6 underline'>
+                    <div className='mt-2 text-blue-800 text-1xl font-semibold text-left py-6 underline'>
                     Don&apos;t have an account yet? Sign up now!
-                    </h1>
+                    </div>
                 </Link>
                 <h1 className="font-semibold text-blue-800 text-3xl">
                     {lowerText} 
