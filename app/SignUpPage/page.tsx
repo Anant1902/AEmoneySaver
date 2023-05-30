@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css';
 import '../globals.css'
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { checkSignIn, createUser } from '../../src/components/UserService'
+import { checkSignIn, createUser } from '../../components/UserService'
 import Link from 'next/link';
 
 
@@ -41,7 +41,7 @@ function SignUpPage() {
             } else {
                 createUser(id, email, uname, pass, name);
                 changeLowerText(
-                    "Sign Up successful! Welcome to Boundless Bazaar."
+                    "Sign Up successful! Welcome to Boundless Bazaar " + name + "!"
                     );
             }
         })

@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css';
 import '../globals.css'
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { checkSignIn, createUser } from '../../src/components/UserService'
+import { checkSignIn, createUser } from '../../components/UserService'
 import Link from 'next/link';
 
 
@@ -42,7 +42,7 @@ function SignInPage() {
                         );
                 } else {
                     changeLowerText(
-                        "Sign in successful. Welcome back {name}!"
+                        "Sign in successful. Welcome back " + name + "!"
                         );
                 }
             }
