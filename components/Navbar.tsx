@@ -66,7 +66,7 @@ function NavBar() {
           </Transition> */}
         </Popover>
 
-        <a href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700">
+        <a href="/ProductRequestPage" className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700">
           List a Product
         </a>
         <a href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700">

@@ -5,8 +5,7 @@ import { useState } from 'react';
 import { checkSignIn } from '../../components/UserService'
 import Link from 'next/link';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import React from 'react';
 
 function SignInPage() {
 
