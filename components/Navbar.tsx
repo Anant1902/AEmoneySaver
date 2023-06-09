@@ -16,7 +16,7 @@ function NavBar() {
       </div>
       <Popover.Group className="hidden lg:flex lg:gap-x-20">
         <Popover>
-          <a href="/Marketplace" className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700">
+          <a href="/MarketplacePage" className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700">
             Marketplace
             {/* <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" /> */}
           </a>
